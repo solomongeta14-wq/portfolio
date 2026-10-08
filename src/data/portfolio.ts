@@ -53,7 +53,7 @@ export const portfolio = {
   /** Drop your CV at this path in /public — the UI degrades gracefully if missing. */
   resumePath: "/resume/solomon-geta-cv.pdf",
   /** Drop your photo at this path in /public — a monogram fallback shows if missing. */
-  profileImage: "/images/profile.jpg",
+  profileImage: "/images/profile-photo.jpg",
   education: [
     {
       degree: "Bachelor of Science in Software Engineering",
