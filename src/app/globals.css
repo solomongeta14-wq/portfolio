@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens — light (default) + dark (html.dark, site default)   */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --page-bg: #f8f5ef;
+  --page-bg-deep: #ece7df;
+  --card-bg: #ffffff;
+  --card-bg-alt: #fcfaf6;
+  --card-bg-glass: #ffffffd9;
+
+  --text-primary: #03060d;
+  --text-secondary: #292e38;
+  --text-muted: #595e66;
+  --text-subtle: #83868c;
+
+  --border-subtle: #dbd7d0;
+  --border-strong: #b6b0a7;
+
+  --accent-lime: #6cae00;
+  --accent-lime-bright: #7dc600;
+  --accent-lime-dim: #558d00;
+  --accent-lime-bg: #6cae0014;
+  --accent-lime-bg-hover: #6cae0029;
+  --accent-lime-border: #6cae0047;
+
+  --accent-gold: #cd8800;
+  --accent-gold-bright: #fcc737;
+  --accent-gold-bg: #e1a1001a;
+
+  --glow-lime: #6cae0026;
+  --glow-cyan: #1db8ce1a;
+  --glow-gold: #f3b01d26;
+
+  --overlay-dark: #03060da6;
+  --overlay-card: #f8f5efeb;
+  --status-online: #00a420;
+
+  --card-shadow: 0 1px 3px #03060d0f, 0 4px 16px #03060d12;
+  --card-shadow-hover: 0 4px 8px #03060d14, 0 12px 40px #03060d1c;
+}
+
+html.dark {
+  --page-bg: #010205;
+  --page-bg-deep: #000102;
+  --card-bg: #05070e;
+  --card-bg-alt: #03050a;
+  --card-bg-glass: #05070eb3;
+
+  --text-primary: #eeeeee;
+  --text-secondary: #bcbec1;
+  --text-muted: #7e8085;
+  --text-subtle: #4b4d50;
+
+  --border-subtle: #ffffff14;
+  --border-strong: #ffffff29;
+
+  --accent-lime: #87d400;
+  --accent-lime-bright: #afec32;
+  --accent-lime-dim: #6dae00;
+  --accent-lime-bg: #87d40017;
+  --accent-lime-bg-hover: #87d40029;
+  --accent-lime-border: #87d40038;
+
+  --accent-gold: #fcc737;
+  --accent-gold-bright: #fcd94f;
+  --accent-gold-bg: #f3ba2517;
+
+  --glow-lime: #87d4002e;
+  --glow-cyan: #22cde524;
+  --glow-gold: #f3ba2524;
+
+  --overlay-dark: #000102bf;
+  --overlay-card: #020307b3;
+  --status-online: #39c34b;
+
+  --card-shadow: 0 2px 20px #0000004d;
+  --card-shadow-hover: 0 8px 40px #00000073;
+}
+
+@theme inline {
+  --color-page: var(--page-bg);
+  --color-page-deep: var(--page-bg-deep);
+  --color-card: var(--card-bg);
+  --color-card-alt: var(--card-bg-alt);
+  --color-card-glass: var(--card-bg-glass);
+
+  --color-hi: var(--text-primary);
+  --color-med: var(--text-secondary);
+  --color-lo: var(--text-muted);
+  --color-whisper: var(--text-subtle);
+
+  --color-subtle: var(--border-subtle);
+  --color-str: var(--border-strong);
+
+  --color-accent: var(--accent-lime);
+  --color-accent-bright: var(--accent-lime-bright);
+  --color-accent-dim: var(--accent-lime-dim);
+  --color-accent-bg: var(--accent-lime-bg);
+  --color-accent-bg-hover: var(--accent-lime-bg-hover);
+  --color-accent-border: var(--accent-lime-border);
+
+  --color-gold: var(--accent-gold);
+  --color-gold-bright: var(--accent-gold-bright);
+  --color-gold-bg: var(--accent-gold-bg);
+
+  --color-online: var(--status-online);
+
+  --shadow-card: var(--card-shadow);
+  --shadow-card-hover: var(--card-shadow-hover);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "Cascadia Code", monospace;
+  --font-serif: var(--font-lora), Georgia, "Times New Roman", serif;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+
+@layer base {
+  html {
+    font-family: var(--font-serif);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+  }
+
+  /* Subtle global colour easing — part of the reference "feel" */
+  body,
+  body * {
+    transition:
+      background-color 0.25s,
+      border-color 0.25s,
+      color 0.25s,
+      box-shadow 0.25s;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--page-bg-deep);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-lime-border);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-lime);
+  }
+
+  ::selection {
+    background-color: var(--accent-lime-bg-hover);
+    color: var(--accent-lime-dim);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-lime);
+    outline-offset: 2px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Component helpers                                                  */
+/* ------------------------------------------------------------------ */
+
+.portfolio-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--card-shadow);
+  transition:
+    box-shadow 0.3s,
+    border-color 0.3s;
+}
+
+.portfolio-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--accent-lime-border);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border-subtle),
+    transparent
+  );
+}
+
+.tag-pill {
+  background-color: var(--accent-lime-bg);
+  border: 1px solid var(--accent-lime-border);
+  color: var(--accent-lime);
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-caret {
+  animation: caret-blink 1.05s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

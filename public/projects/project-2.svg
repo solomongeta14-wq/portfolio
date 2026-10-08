@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Project placeholder 2">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070e"/>
+      <stop offset="100%" stop-color="#010205"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#87d400"/>
+      <stop offset="100%" stop-color="#fcc737"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg2)"/>
+  <circle cx="160" cy="140" r="200" fill="#87d400" opacity="0.08"/>
+  <circle cx="1040" cy="620" r="200" fill="#22cde5" opacity="0.06"/>
+  <rect x="80" y="90" width="120" height="8" rx="4" fill="url(#accent2)"/>
+  <text x="80" y="200" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#eeeeee">PROJECT_PLACEHOLDER_2</text>
+  <text x="80" y="260" font-family="Georgia, serif" font-size="28" fill="#7e8085">Replace this image with a real screenshot in /public/projects/</text>
+  <rect x="80" y="330" width="500" height="300" rx="24" fill="#03050a" stroke="#87d40038"/>
+  <rect x="620" y="330" width="500" height="300" rx="24" fill="#03050a" stroke="#ffffff14"/>
+  <rect x="110" y="370" width="240" height="14" rx="7" fill="#ffffff14"/>
+  <rect x="110" y="410" width="360" height="14" rx="7" fill="#ffffff14"/>
+  <rect x="650" y="370" width="240" height="14" rx="7" fill="#ffffff14"/>
+  <rect x="650" y="410" width="300" height="14" rx="7" fill="#ffffff14"/>
+  <rect x="110" y="530" width="140" height="44" rx="22" fill="#87d400" opacity="0.9"/>
+  <rect x="650" y="530" width="140" height="44" rx="22" fill="#87d40017" stroke="#87d40038"/>
+</svg>
