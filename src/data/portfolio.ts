@@ -65,7 +65,7 @@ export const portfolio = {
   /** Drop your photo at this path in /public — a monogram fallback shows if missing. */
   profileImage: "/images/profile-photo.jpg",
   /** Hero (orbiting) photo — drop a second image here to differ from the About portrait. */
-  heroImage: "/images/profile-hero.jpg",
+  heroImage: "/images/Coder.jpg",
   education: [
     {
       level: "Primary Education",
