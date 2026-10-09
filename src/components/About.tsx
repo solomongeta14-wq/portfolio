@@ -106,7 +106,8 @@ export default function About() {
                 <li className="flex items-start gap-2.5 text-sm text-lo">
                   <span className="tag-pill mt-0.5 shrink-0">EDUCATION</span>
                   <span>
-                    {portfolio.education[0].degree} — {portfolio.education[0].institution}
+                    {portfolio.education[portfolio.education.length - 1].degree} —{" "}
+                    {portfolio.education[portfolio.education.length - 1].institution}
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5 text-sm text-lo">

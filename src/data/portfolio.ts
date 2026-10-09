@@ -9,13 +9,23 @@ export type SocialLink = {
   icon: "github" | "linkedin" | "email" | "phone";
 };
 
+export type EducationIcon = "book" | "graduation" | "university";
+
 export type EducationEntry = {
-  degree: string;
+  /** Milestone label, e.g. "Primary Education". */
+  level: string;
+  /** School or university name. */
   institution: string;
-  location: string;
-  /** e.g. "2020 — 2024" — add when available. */
+  /** Degree or qualification, when applicable (University). */
+  degree?: string;
+  /** Period in the Ethiopian Calendar (E.C.) where applicable. */
   period?: string;
+  /** Grades or credential line, e.g. "Grades 1–8". */
+  credential?: string;
   description?: string;
+  /** Lighthearted one-liner shown on the card. */
+  humor?: string;
+  icon: EducationIcon;
 };
 
 export type ExperienceEntry = {
@@ -54,11 +64,41 @@ export const portfolio = {
   resumePath: "/resume/solomon-geta-cv.pdf",
   /** Drop your photo at this path in /public — a monogram fallback shows if missing. */
   profileImage: "/images/profile-photo.jpg",
+  /** Hero (orbiting) photo — drop a second image here to differ from the About portrait. */
+  heroImage: "/images/profile-hero.jpg",
   education: [
     {
-      degree: "Bachelor of Science in Software Engineering",
+      level: "Primary Education",
+      institution: "Wolaita Lika Primary School",
+      period: "2003 – 2011 E.C.",
+      credential: "Grades 1–8",
+      description:
+        "My educational journey began here, where I developed the foundational knowledge that prepared me for future learning.",
+      humor:
+        "Every expert starts as a beginner—even the people who debug code at 2 a.m.",
+      icon: "book",
+    },
+    {
+      level: "Secondary Education",
+      institution: "Wolaita Lika High School",
+      period: "2012 – 2015 E.C.",
+      credential: "Grades 9–12",
+      description:
+        "I continued strengthening my academic knowledge, developing learning habits, and preparing for university life.",
+      humor:
+        "More subjects, bigger goals, and the occasional question: When will I ever use this?",
+      icon: "graduation",
+    },
+    {
+      level: "University Education",
       institution: "Dire Dawa University",
-      location: "Dire Dawa, Ethiopia",
+      degree: "BSc in Software Engineering",
+      period: "Fourth-year · In progress",
+      credential: "BSc in Software Engineering",
+      description:
+        "I am developing my software engineering knowledge and technical skills, learning to turn ideas into practical applications and solve real-world problems.",
+      humor: "Current mission: turn curiosity, creativity, and code into something useful.",
+      icon: "university",
     },
   ] as EducationEntry[],
   /** [ADD EXPERIENCE HERE] — currently empty on purpose; never invent roles. */

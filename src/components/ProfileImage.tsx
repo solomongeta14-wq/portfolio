@@ -4,11 +4,17 @@ import { useState } from "react";
 import { portfolio } from "@/data/portfolio";
 
 /**
- * Renders /public/images/profile.jpg with a graceful monogram fallback
- * when the file has not been added yet. Drop your photo at
- * public/images/profile.jpg — no code changes required.
+ * Renders a profile photo with a graceful monogram fallback when the file is
+ * missing. Pass `src` to use a specific image; defaults to
+ * `portfolio.profileImage`.
  */
-export default function ProfileImage({ className }: { className?: string }) {
+export default function ProfileImage({
+  className,
+  src = portfolio.profileImage,
+}: {
+  className?: string;
+  src?: string;
+}) {
   const [failed, setFailed] = useState(false);
 
   if (failed) {
@@ -28,7 +34,7 @@ export default function ProfileImage({ className }: { className?: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={portfolio.profileImage}
+      src={src}
       alt={`${portfolio.name} — ${portfolio.title}`}
       className={`h-full w-full object-cover ${className ?? ""}`}
       onError={() => setFailed(true)}

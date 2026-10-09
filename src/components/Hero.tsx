@@ -95,7 +95,7 @@ function OrbitRig() {
             boxShadow: "0 0 0 1px var(--accent-lime-border), 0 0 40px var(--glow-lime)",
           }}
         >
-          <ProfileImage />
+          <ProfileImage src={portfolio.heroImage} />
         </div>
 
         {/* Orbiting dots */}

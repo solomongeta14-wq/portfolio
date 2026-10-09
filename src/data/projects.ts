@@ -32,61 +32,72 @@ export const projectCategories = ["All", "Frontend", "Backend", "Full Stack"] as
 
 export const projects: Project[] = [
   {
-    id: "project-placeholder-1",
-    title: "PROJECT_PLACEHOLDER_1",
+    id: "income-calculator",
+    title: "Income Calculator",
     description:
-      "[ADD PROJECT HERE] Replace this with a short, one-or-two sentence summary of your project.",
+      "A calculator that helps users track earnings and quickly work out their income.",
     longDescription:
-      "[ADD LONG DESCRIPTION HERE] Explain what the project does, who it is for, and what technology choices you made.",
-    problem: "[ADD THE PROBLEM THIS PROJECT SOLVES HERE]",
-    solution: "[ADD YOUR SOLUTION APPROACH HERE]",
+      "Income Calculator is a personal project that lets users enter their income details and instantly see calculated results. It focuses on a clean, easy-to-use interface for everyday money tracking.",
+    problem: "Manually working out income and totals is slow and error-prone.",
+    solution:
+      "A lightweight calculator that takes the user's inputs and produces clear, accurate income figures instantly.",
     features: [
-      "[ADD FEATURE HERE]",
-      "[ADD FEATURE HERE]",
-      "[ADD FEATURE HERE]",
+      "Enter and calculate income",
+      "Instant, accurate results",
+      "Clean, responsive interface",
     ],
-    challenges: ["[ADD CHALLENGE HERE]"],
-    technologies: ["React", "Node.js", "Supabase"],
-    image: "/projects/project-1.svg",
-    github: "#", // [ADD LINK HERE]
-    demo: "#", // [ADD LINK HERE]
-    category: "Full Stack",
+    challenges: ["Keeping calculations accurate while the UI stays simple."],
+    technologies: ["JavaScript", "HTML", "CSS"],
+    image: "/projects/income-calculator.png",
+    github: "https://github.com/solomongeta14-wq/income-calculator",
+    demo: "https://income-calculator-seven.vercel.app",
+    category: "Frontend",
     featured: true,
   },
   {
-    id: "project-placeholder-2",
-    title: "PROJECT_PLACEHOLDER_2",
+    id: "queue-system",
+    title: "Queue System",
     description:
-      "[ADD PROJECT HERE] Replace this with a short, one-or-two sentence summary of your project.",
+      "A system for managing and organizing queues, giving users a clear view of their place in line.",
     longDescription:
-      "[ADD LONG DESCRIPTION HERE] Explain what the project does, who it is for, and what technology choices you made.",
-    problem: "[ADD THE PROBLEM THIS PROJECT SOLVES HERE]",
-    solution: "[ADD YOUR SOLUTION APPROACH HERE]",
-    features: ["[ADD FEATURE HERE]", "[ADD FEATURE HERE]"],
-    challenges: ["[ADD CHALLENGE HERE]"],
-    technologies: ["React", "CSS", "JavaScript"],
-    image: "/projects/project-2.svg",
-    github: "#", // [ADD LINK HERE]
-    demo: "#", // [ADD LINK HERE]
-    category: "Frontend",
+      "Queue System is a personal project built to manage queues digitally. It organizes waiting entries and gives a clear overview of the queue so service can move in an orderly way.",
+    problem: "Physical queues are disorganized and hard to manage fairly.",
+    solution:
+      "A digital queue manager that tracks entries and presents the queue in a clear, organized view.",
+    features: [
+      "Add and manage queue entries",
+      "Clear view of the current queue",
+      "Orderly, fair processing",
+    ],
+    challenges: ["Designing an interface that stays clear as the queue grows."],
+    technologies: ["JavaScript", "HTML", "CSS"],
+    image: "/images/queu-system-image.jpg",
+    github: "https://github.com/solomongeta14-wq/Queu-System",
+    demo: "#",
+    category: "Full Stack",
     featured: false,
   },
   {
-    id: "project-placeholder-3",
-    title: "PROJECT_PLACEHOLDER_3",
+    id: "edir-management",
+    title: "Edir Management",
     description:
-      "[ADD PROJECT HERE] Replace this with a short, one-or-two sentence summary of your project.",
+      "A registration page for managing an Edir, a traditional community savings association.",
     longDescription:
-      "[ADD LONG DESCRIPTION HERE] Explain what the project does, who it is for, and what technology choices you made.",
-    problem: "[ADD THE PROBLEM THIS PROJECT SOLVES HERE]",
-    solution: "[ADD YOUR SOLUTION APPROACH HERE]",
-    features: ["[ADD FEATURE HERE]", "[ADD FEATURE HERE]"],
-    challenges: ["[ADD CHALLENGE HERE]"],
-    technologies: ["Node.js", "Express.js", "Supabase"],
-    image: "/projects/project-3.svg",
-    github: "#", // [ADD LINK HERE]
-    demo: "#", // [ADD LINK HERE]
-    category: "Backend",
+      "Edir Management provides a registration page for an Edir, the traditional community association. It handles member registration and keeps the association's records organized in one place.",
+    problem: "Edir records are often kept manually, making them hard to manage.",
+    solution:
+      "A registration page that digitizes member sign-up and keeps association records organized.",
+    features: [
+      "Member registration form",
+      "Organized member records",
+      "Simple, accessible interface",
+    ],
+    challenges: ["Designing a form that is simple for all community members to use."],
+    technologies: ["JavaScript", "HTML", "CSS"],
+    image: "/images/edir-management-system.jpg",
+    github: "https://github.com/solomongeta14-wq/updated-edir-registration-page",
+    demo: "#",
+    category: "Frontend",
     featured: false,
   },
 ];
