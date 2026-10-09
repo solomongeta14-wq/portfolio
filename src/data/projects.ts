@@ -70,7 +70,7 @@ export const projects: Project[] = [
       "Orderly, fair processing",
     ],
     challenges: ["Designing an interface that stays clear as the queue grows."],
-    technologies: ["JavaScript", "HTML", "CSS"],
+    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
     image: "/images/queu-system-image.jpg",
     github: "https://github.com/solomongeta14-wq/Queu-System",
     demo: "#",
@@ -81,19 +81,19 @@ export const projects: Project[] = [
     id: "edir-management",
     title: "Edir Management",
     description:
-      "A registration page for managing an Edir, a traditional community savings association.",
+      "A mobile application for managing an Edir, a traditional community savings association.",
     longDescription:
-      "Edir Management provides a registration page for an Edir, the traditional community association. It handles member registration and keeps the association's records organized in one place.",
+      "Edir Management is a Flutter-built mobile application for an Edir, the traditional community association. It handles member registration and keeps the association's records organized in one place.",
     problem: "Edir records are often kept manually, making them hard to manage.",
     solution:
-      "A registration page that digitizes member sign-up and keeps association records organized.",
+      "A mobile application that digitizes member sign-up and keeps association records organized.",
     features: [
       "Member registration form",
       "Organized member records",
       "Simple, accessible interface",
     ],
-    challenges: ["Designing a form that is simple for all community members to use."],
-    technologies: ["JavaScript", "HTML", "CSS"],
+    challenges: ["Designing a flow that is simple for all community members to use."],
+    technologies: ["Flutter", "Dart"],
     image: "/images/edir-management-system.jpg",
     github: "https://github.com/solomongeta14-wq/updated-edir-registration-page",
     demo: "#",
